@@ -1,0 +1,91 @@
+/* style.css */
+body {
+    padding:0px;    /* override default padding */
+    margin:0px;     /* override default margin */
+    background-image: url('./images/galaxy-background.jpeg');   /* background for entire html document */
+    background-size: cover;                                     /* scale to cover entire viewport * ??? - repeat */ 
+}
+
+#grid-container {
+    width: 100vw;                   /* 100% of the viewport width */
+    height: 100%;                   /* ??? */
+    display: grid;                  /* grid display, good for overlapping features */
+    grid-template-columns: 1fr;     /* number of columns = 1 fraction unit */
+    grid-template-rows: auto auto auto auto auto 300px  /* ??? - condense this */
+}
+
+.grid-item {
+    position: relative      /* ??? - something with the z-index */
+}
+
+.header {
+    grid-column: 1 / 2;     /* span column 1 */      
+    grid-row: 1 / 2;        /* span row 1 */
+    z-index: 1;             /* higher z-index to be on top */
+}
+
+.header img {
+    width: 100%;            /* ensure image takes up the full width of grid area */ 
+    height: auto;           /* ensure total image height is included */
+} 
+
+.intro { 
+    grid-column: 1 / 2;     /* span column 1 */
+    grid-row: 1 / 2         /* span row 1 */
+}
+
+.flex-container {
+    align-items: center;        /* ??? */
+    display: flex;              /* flex display */
+    flex-direction: row;        /* rows of flex items */
+    padding: 20px 5% 20px 5%;   /* top padding, right padding, bottom padding, left padding */
+    gap: 20px;                  /* space between flex items */
+    flex-wrap: wrap;            /* items wrap onto next line * ??? - not working */
+}
+
+#intro-container.flex-container {   /* special format for intro container */
+    padding: 10% 5% 20px 5%;        /* top padding, right padding, bottom padding, left padding */
+}
+
+.flex-item {
+    flex-basis: calc(50% - 10px);   /* 50% width minus border buffer */
+    background-color: pink;       /* background color */
+    box-sizing: border-box;         /* include padding in item's width * ??? */
+    text-align: center;             /* center content horizontally * ??? */
+    justify-content: center;        /* ??? */
+    align-items: center;            /* ??? */
+    height: 40px;
+    width: 40px;
+}
+
+#intro-container .flex-item {   /* special format for intro flex items */
+    height: auto                /* auto height for pfp */
+}
+  
+.profile img {
+    width: 100%;    /* ??? */
+    height: 100%;   /* ??? */
+    display: block  /* ??? */
+}
+
+.description p {
+    margin: 0;                  /* remove default margin */
+    overflow: hidden;           /* ensure text does not overflow */
+    text-overflow: ellipsis;    /* optional: add ellipsis if text is too long */
+    white-space: wrap;          /* prevent text from wrapping */
+}
+
+.flex1 { 
+    grid-column: 1 / 2;     /* span column 1 */
+    grid-row: 2 / 3         /* span row 2 */
+}
+
+.flex2 { 
+    grid-column: 1 / 2;     /* span column 1 */
+    grid-row: 3 / 4         /* span row 3 */
+}
+
+.flex3 { 
+    grid-column: 1 / 2;     /* span column 1 */
+    grid-row: 4 / 5         /* span row 4 */
+}
