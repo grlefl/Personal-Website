@@ -1,7 +1,7 @@
-# Personal-Website
+# Personal Website
 
-## Project Status 
+### Project Status 
 This project is in early development stages. 
 
-## Overview 
+### Overview 
 Working on a personal website to practice web development. 
